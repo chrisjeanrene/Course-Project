@@ -1,6 +1,5 @@
 # LEDdisplay class
 
-import time
 from shifter import Shifter    # extend by composition
 import multiprocessing
  

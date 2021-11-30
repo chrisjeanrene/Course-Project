@@ -32,7 +32,9 @@ class Joystick:
         self.y = self.ADC.read(1)
 
     def buttonNotPressed(self):
-        return True
+        if input('ButtonNotPressed? (True, False): ') == 'T':
+            return True
+        else: return False
         #Gets the value from the button, should be true until joystick button is clicked.
 
 
@@ -54,5 +56,5 @@ class Joystick:
                 if row > 8: row = 8
                 elif row < 1: row = 1
                 print('row: %d, col: %d' % (row,col))
-                sleep(1) 
+                sleep(1)
         return (row,col)
